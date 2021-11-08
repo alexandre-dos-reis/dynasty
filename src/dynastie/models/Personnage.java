@@ -3,7 +3,7 @@ package dynastie.models;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Personnage {
+public abstract class Personnage {
 	protected Dynastie dynastie;
 	protected List<Personnage> enfants;
 	protected Homme pere;
@@ -18,6 +18,44 @@ public class Personnage {
 		this.nom = nom;
 		this.surnom = surnom;
 		this.enfants = new ArrayList<Personnage>();
+	}
+
+	public Personnage(){}
+
+	public String getNom() {
+		return this.nom;
+	}
+
+	public Personnage setNom(String nom) {
+		this.nom = nom;
+		return this;
+	}
+
+	public String getSurnom() {
+		return this.surnom;
+	}
+
+	public Personnage setSurnom(String surnom) {
+		this.surnom = surnom;
+		return this;
+	}
+
+	public int getNaissance() {
+		return this.naissance;
+	}
+
+	public Personnage setNaissance(int naissance) {
+		this.naissance = naissance;
+		return this;
+	}
+
+	public int getDeces() {
+		return this.deces;
+	}
+
+	public Personnage setDeces(int deces) {
+		this.deces = deces;
+		return this;
 	}
 
 	public void naitre(int annee) {

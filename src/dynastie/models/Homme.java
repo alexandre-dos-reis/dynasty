@@ -8,6 +8,10 @@ public class Homme extends Personnage {
 		super(nom, surnom);
 	}
 
+	public Homme() {
+		super();
+	}
+
 	/**
 	 * Permet à l'homme d'épouser une femme. Fait rentrer la femme dans la dynastie
 	 * (celle de l'homme)
